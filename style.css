@@ -1,0 +1,296 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #d6eff4;
+}
+
+.navbar {
+    background-image: url('assets/img/33960758_317985192069043_8244977864055717888_n.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    margin: 0;
+    padding: 20px 30px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #212121;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #212121;
+}
+
+.menu li a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tombol {
+    display: none;
+    color: white;
+    font-size: 14pt;
+}
+
+.tombol:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .tombol {
+        display: block;
+    }
+    .menu.aktif {
+        display: inline-block;
+        position: absolute;
+        top: 64px;
+        background: #212121;
+        padding: 10px 20px;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .menu.aktif li a {
+        padding: 10px;
+        display: inline-block !important;
+    }
+}
+
+.btn-primary {
+    background: #1a54c0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-pimary:hover {
+    background: #11367c;
+}
+
+.btn-pimary:active {
+    background: #11367c;
+}
+
+.welcome-section {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assets/img/33960758_317985192069043_8244977864055717888_n.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-text {
+    position: relative;
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.tentang-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    height: 500px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.text-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.produk-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.produk-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.produk-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.produk-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.produk-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.produk-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.produk-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+.produk-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-image: url('assets/img/background.jpg');
+    padding: 30px 50px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    color: white;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.layanan-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.layanan-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.layanan-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.layanan-table th,
+.layanan-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.layanan-table th {
+    background-color: #11367c;
+    color: white;
+}
+
+.layanan-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.layanan-table td {
+    font-size: 1rem;
+}

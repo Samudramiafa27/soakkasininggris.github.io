@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Navbar Resposive Dengan HTML dan CSS</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#logo" class="logo">Logo</a>
+
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tentang">Tentang</a></li>
+                <li><a href="../index.html#produk">Produk</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="kontak_kami.html">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>
+    <section class="layanan-section" id="layanan">
+        <h2>Layanan Kami</h2>
+        <table class="layanan-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Layanan</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Layanan Konsultasi</td>
+                    <td>Konsultasi dengan ahli profesional dalam berbagai bidang.</td>
+                    <td>Rp 500.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Layanan perawatan</td>
+                    <td>Perawatan lengkap dengan berbagai metode terbaru.</td>
+                    <td>Rp 1.000.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script type="text/javascript">
+        //deklarasi tombol dan menu
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+
+        //membuat event click
+        //pada saat tombol di click, tambahkan class aktif apda class menu
+        //saat diklik lagi, maka class aktif dihilangkan dari class menu (toggle)
+        tombol.addEventListener("click", () => {
+            menu.classList.toggle("aktif");
+        })
+    </script>
+</body>
+
+</html>

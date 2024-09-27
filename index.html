@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Navbar Resposive Dengan HTML dan CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#logo" class="logo">Logo</a>
+
+            <ul class="menu">
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="page/layanan.html">Layanan</a></li>
+                <li><a href="page/kontak_kami.html">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>
+    <section class="welcome-section" id="welcome">
+        <div class="welcome-text">
+            <h1>Selamat Datang</h1>
+            <p style="margin-bottom: 40px">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore perferendis neque ducimus tenetur nulla ut omnis ea illum alias? Dolores autem earum dolorem enim sequi velit, distinctio consequuntur optio.
+            </p>
+            <a href="#tentang" class="btn-primary">Lihat Detail</a>
+        </div>
+    </section>
+    <section class="tentang-section" id="tentang">
+        <div class="image-container">
+            <img src="assets/img/kasin inggris.jpg" alt="Deskripksi Gambar">
+        </div>
+        <div class="text-container">
+            <h2>Tentang Kami</h2>
+            <p>
+                Merchendise Kasin Inggris Disctrict_57
+            </p>
+        </div>
+    </section>
+    <section class="produk-section" id="produk">
+        <h2>Produk Kami</h2>
+        <div class="produk-container">
+            <div class="produk-card">
+                <img src="assets/img/poduk 1.jpg" alt="Produk 1" />
+                <h3>Produk 1</h3>
+                <p>
+                    The Lion Gate
+                </p>
+            </div>
+            <div class="produk-card">
+                <img src="assets/img/poduk 2.jpg" alt="Produk 2" />
+                <h3>Produk 2</h3>
+                <p>
+                    Excellence
+                </p>
+            </div>
+            <div class="produk-card">
+                <img src="assets/img/produk 3.jpg" alt="Produk 3" />
+                <h3>Produk 3</h3>
+                <p>
+                    Kasin Inggris
+                </p>
+            </div>
+            <div class="produk-card">
+                <img src="assets/img/produk 4.jpg" alt="Produk 4" />
+                <h3>Produk 4</h3>
+                <p>
+                    GoodSide
+                </p>
+            </div>
+            <div class="produk-card">
+                <img src="assets/img/produk 5.jpg" alt="Produk 5" />
+                <h3>Produk 5</h3>
+                <p>
+                    Serdadu Singa
+                </p>
+            </div>
+            <div class="produk-card">
+                <img src="assets/img/produk 6.jpg" alt="Produk 6" />
+                <h3>Produk 6</h3>
+                <p>
+                    The lion Gate old
+                </p>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        //deklarasi tombol dan menu
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+
+        //membuat event click
+        //pada saat tombol di click, tambahkan class aktif apda class menu
+        //saat diklik lagi, maka class aktif dihilangkan dari class menu (toggle)
+        tombol.addEventListener("click", () => {
+            menu.classList.toggle("aktif");
+        })
+    </script>
+</body>
+
+</html>

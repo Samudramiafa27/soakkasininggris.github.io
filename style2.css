@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ddd;
+}
+
+.tombol {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
+/* Section styles */
+
+.welcome-section,
+.tentang-section,
+.produk-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.produk-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produk-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.produk-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        /* Hide the menu by default */
+        flex-direction: column;
+        /* Stack items vertically */
+        position: absolute;
+        top: 60px;
+        /* Adjust based on your navbar height */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+    .menu.aktif {
+        display: flex;
+        /* Show the menu when active */
+    }
+    .tombol {
+        display: block;
+        /* Show the hamburger icon */
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}
